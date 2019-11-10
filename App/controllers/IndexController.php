@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class PageController
+class IndexController
 {
     public function index()
     {

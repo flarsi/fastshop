@@ -1,0 +1,20 @@
+.order{
+}
+
+.product{
+    width: 75%;
+}
+
+.product_name, .weight, .price, .order_created_at{
+    float: left;
+    margin: 0 5px;
+    width: 100px;
+}
+
+.order_created_at{
+    width: max-content;
+}
+
+.total-price{
+    float: left;
+}

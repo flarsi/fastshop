@@ -2,7 +2,7 @@
 
 namespace App\Core;
 
-use App\Controllers\PageController;
+use App\Controllers\IndexController;
 
 class Request
 {

@@ -7,7 +7,7 @@ class Db
         try {
             $pdo = new PDO(
                 'mysql:host=localhost;dbname=fastshop',
-                'user',
+                'root',
                 '123456'
             );
             return $pdo;
