@@ -31,9 +31,9 @@ class Order
         return $result->fetchAll(\PDO::FETCH_GROUP|\PDO::FETCH_ASSOC);
     }
 
-    public function save($userId, $productIds, $prices, $weights)
+    public function save($data)
     {
-        $order = "INSERT INTO orders(user_id) VALUES ($userId)";
+        $order = "INSERT INTO orders(user_id) VALUES (" . $data['userId'] .")";
         $j = 0;
         foreach ($productIds as $productId){
             $orderProduct = "INSERT INTO order_product (order_product.order_id, order_product.product_id, order_product.price, order_product.weight)

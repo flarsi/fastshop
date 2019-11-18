@@ -8,7 +8,7 @@ class Db
             $pdo = new PDO(
                 'mysql:host=localhost;dbname=fastshop',
                 'root',
-                '123456'
+                '328409root'
             );
             return $pdo;
         } catch (Exception $e){

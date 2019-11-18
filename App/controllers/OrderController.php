@@ -35,19 +35,11 @@ class OrderController
 
     public function store()
     {
-        $userid = $_POST["userId"];
-        $productsIds = $_POST["productsIds"];
-        $prices = $_POST["prices"];
-        $weights = $_POST["weights"];
+        $post = $_POST;
 
         $order = new  Order();
-        $sucsess = $order->save($userid, $productsIds, $prices, $weights);
-//        $post['name'] = array_filter($_POST, function ($item) {
-//            if (!empty($item['name'])) return $item;
-//        });
-        echo '<pre>';
-        var_dump($_POST);
-        echo '</pre>';
+        $sucsess = $order->save($post);
+
         return $sucsess;
     }
 }
