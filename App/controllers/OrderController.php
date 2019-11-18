@@ -10,6 +10,7 @@ namespace App\Controllers;
 
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\Category;
 
 class OrderController
 {
@@ -17,20 +18,36 @@ class OrderController
     {
         $order = new Order();
         $orders = $order->all();
-//        var_dump($orders);
         return view('orders', ['orders' => $orders]);
     }
 
     public function create()
     {
+        $title = 'Create Order';
         $product = new Product();
         $products = $product->all([]);
-        var_dump($products);
-        return view('order-create');
+
+        $category = new Category();
+        $categories = $category->all();
+
+        return view('order-create', compact('title','categories', 'products'));
     }
 
     public function store()
     {
+        $userid = $_POST["userId"];
+        $productsIds = $_POST["productsIds"];
+        $prices = $_POST["prices"];
+        $weights = $_POST["weights"];
+
+        $order = new  Order();
+        $sucsess = $order->save($userid, $productsIds, $prices, $weights);
+//        $post['name'] = array_filter($_POST, function ($item) {
+//            if (!empty($item['name'])) return $item;
+//        });
+        echo '<pre>';
         var_dump($_POST);
+        echo '</pre>';
+        return $sucsess;
     }
 }

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Professional
- * Date: 09.11.2019
- * Time: 12:57
- */
 
 namespace App\Models;
 
@@ -36,4 +30,23 @@ class Order
         $result->execute();
         return $result->fetchAll(\PDO::FETCH_GROUP|\PDO::FETCH_ASSOC);
     }
+
+    public function save($userId, $productIds, $prices, $weights)
+    {
+        $order = "INSERT INTO orders(user_id) VALUES ($userId)";
+        $j = 0;
+        foreach ($productIds as $productId){
+            $orderProduct = "INSERT INTO order_product (order_product.order_id, order_product.product_id, order_product.price, order_product.weight)
+                             VALUES ($userId, $productId, $prices[$j], $weights[$j])";
+            $resultOrder = $this->db->prepare($orderProduct);
+            $resultOrder->execute($userId, $productId, $prices[$j], $weights[$j]);
+            $j++;
+        }
+
+        $result = $this->db->prepare($order);
+        $result->execute($userId);
+        return $result->fetch();
+
+    }
+
 }

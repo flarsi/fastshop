@@ -1,63 +1,97 @@
 <?php
-require_once 'layouts/header.view.php'
+require_once 'layouts/header.view.php';
 ?>
+<div>
+    <button class="btn btn-success" form="order-form" type="submit">Create</button>
+</div>
 
-    <!-- content-section-starts -->
-    <div class="contact-section-page">
-        <div class="contact-head">
-            <div class="container">
-                <h3>Contact</h3>
-                <p>Home/Contact</p>
-            </div>
-        </div>
-        <div class="contact_top">
-            <div class="container">
-                <div class="col-md-6 contact_left wow fadeInRight" data-wow-delay="0.4s">
-                    <h4>Contact Form</h4>
-                    <p>Lorem ipsum dolor sit amet, adipiscing elit. Donec tincidunt dolor et tristique bibendum. Aenean sollicitudin vitae dolor ut posuere.</p>
-                    <form>
-                        <div class="form_details">
-                            <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                            <input type="text" class="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
-                            <input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
-                            <textarea value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-                            <div class="clearfix"> </div>
-                            <div class="sub-button wow swing animated" data-wow-delay= "0.4s">
-                                <input name="submit" type="submit" value="Send message">
+        <div class="container">
+            <div class="col-12 wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
+                <h4><?=$title?></h4>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <?php if(!empty($categories)): ?>
+                            <div class="form_details">
+                                <select id="products-select" name="products" multiple>
+                                    <?php foreach ($categories as $category) : ?>
+                                        <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-6 company-right wow fadeInLeft" data-wow-delay="0.4s">
-                    <div class="contact-map">
-<!--                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578265.0941403757!2d-98.9828708842255!3d39.41170802696131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1407515822047"> </iframe>-->
+                        <?php endif; ?>
                     </div>
-
-                    <div class="company-right">
-                        <div class="company_ad">
-                            <h3>Contact Info</h3>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit velit justo.</span>
-                            <address>
-                                <p>email:<a href="mail-to: info@example.com">info@display.com</a></p>
-                                <p>phone:  +255 55 55 777</p>
-                                <p>28-7-169, 2nd Ave South</p>
-                                <p>Saskabush, SK   S7M 1T6</p>
-
-                            </address>
-                        </div>
+                    <div class="col-12 col-md-6" style="float: left">
+                        <?php if(!empty($products)): ?>
+                            <div class="form_details">
+                                <form id="order-form" class="form-group row" action="/orders/store" method="POST">
+                                    <table class="table ">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Numbers</td>
+                                                <td>Price</td>
+                                                <td>Weight</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody">
+                                        <?php foreach ($products as $product) : ?>
+                                            <tr class="category_id-<?= $product['category_id'] ?>" id="<?= $product['product_id'] ?>">
+                                                <td><?= $product['product_name'] ?></td>
+                                                <td class="number"><input id="product_id-<?= $product['product_id'] ?>" type="number" name="<?= $product['product_id'] ?>"  value=""></td>
+                                                <td class="price"><?= $product['price'] ?> grn.<input type="hidden" name="price[]" value="<?= $product['price'] ?>"></td>
+                                                <td class="weight"><?= $product['weight'] ?> kg.<input type="hidden" name="weight[]" value="<?= $product['weight'] ?>"></td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                    <input type="hidden" name="user_id" value="2">
+                                    <div class="clearfix"> </div>
+                                    <div class="sub-button wow swing animated animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: swing;">
+                                        <input type="submit" value="Send message">
+                                    </div>
+                                </form>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                    <div class="follow-us">
-                        <h3>follow us on</h3>
-                        <a href="#"><i class="facebook"></i></a>
-                        <a href="#"><i class="twitter"></i></a>
-                        <a href="#"><i class="google-pluse"></i></a>
-                    </div>
-
-
                 </div>
             </div>
         </div>
-
-    </div>
+<script type="text/javascript" src="../public/js/create-order.js"></script>
 <?php
 require_once 'layouts/footer.view.php';
+?>
+<script>
+    $("input[type=submit]").click(function (e) {
+        e.preventDefault();
+        console.log(document.location.origin + "/orders/store");
+
+        var productIds = [];
+        var prices = [];
+        var weights = [];
+        var j = 0;
+        for (var i = 0; i < numb.length; i++) {
+            if (numb[i].value != '') {
+                productIds[j] = tr.parent().id;
+                prices[j] = hprice[i].value;
+                weights[j] = hweight[i].value;
+                j++;
+            }
+        }
+
+        $.ajax({
+            type: "POST",
+            url: document.location.origin + "/orders/store",
+            data: {
+                userId: 2,
+                productIds: productIds,
+                prices: prices,
+                weights: weights
+            },
+            dataType: "text",
+            success: function (msg) {
+                console.log("Прибыли данные: " + msg);
+            }
+        });
+    });
+</script>
+

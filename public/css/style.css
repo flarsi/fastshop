@@ -1867,7 +1867,7 @@ h4.title {
 .contact_left p span:hover{
 	text-decoration:underline;
 }
-.form_details input[type="text"], .form_details textarea {
+.form_details input[type="text"], .form_details textarea, .form_details input[type="number"]{
 	padding: 10px;
 	width: 65%;
 	font-size: 1.2em;

@@ -7,7 +7,7 @@
         <div class="ordering-section" id="Order">
             <div class="container">
                 <?php
-//                var_dump($orders);
+                var_dump($orders);
                     if(!empty($orders)) {
                             foreach ($orders as $key => $order) {
                                 echo "<div class='container order wow fadeInLeft animated justify-content-center'>";
@@ -18,6 +18,7 @@
                             }
                                 echo "<br><div class='total-price'></div></div><div class=\"Popular-Restaurants-grid wow fadeInRight\" data-wow-delay=\"0.4s\"></div>";
                             }
+                            echo "<input type='button' id='create-order'>";
                     }
                 ?>
     <script src=".././public/js/order.js"></script>

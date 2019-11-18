@@ -30,7 +30,7 @@
     <div class="container">
         <div class="top-header">
             <div class="logo">
-                <a href="index.html"><img src="web/images/logo.png" class="img-responsive" alt="" /></a>
+<!--                <a href="index.html"><img src="web/images/logo.png" class="img-responsive" alt="" /></a>-->
             </div>
             <div class="queries">
                 <p>Questions? Call us Toll-free!<span>1800-0000-7777 </span><label>(11AM to 11PM)</label></p>
@@ -54,7 +54,7 @@
                     <li class="active"><a href="/" class="scroll">Home</a></li>|
                     <li><a href="/orders">Order</a></li>|
                     <li><a href="/orders/create">New order</a></li>|
-                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="/contact">contact</a></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>

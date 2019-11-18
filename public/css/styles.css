@@ -1,20 +1,58 @@
-.order{
+.order
+{
 }
 
-.product{
+.product
+{
     width: 75%;
 }
 
-.product_name, .weight, .price, .order_created_at{
-    float: left;
-    margin: 0 5px;
-    width: 100px;
-}
-
-.order_created_at{
+#product.product
+{
     width: max-content;
 }
 
-.total-price{
+.product_name, div.weight, div.price, .order_created_at
+{
     float: left;
+    margin: 0 5px;
+}
+
+.order_created_at
+{
+    width: max-content;
+}
+
+.total-price
+{
+    float: left;
+}
+
+.americanFood, .americanStreetFood, .chinaFood, .westFood,
+.drinks, .product_id, .product_name, div.weight, div.price, .product_code, .out_of_stock, .in_stock
+{
+    float: left;
+    margin: 0 5px;
+}
+
+.number_of_goods, .choose_product
+{
+    margin: 10px 0 0 0;
+}
+
+.form_details select {
+    padding: 10px;
+    width: 65%;
+    font-size: 1.2em;
+    margin: 10px 0px;
+    border: 1px solid #8A8888;
+    color: #8A8888;
+    background: none;
+    -webkit-appearance: none;
+    float: left;
+    outline: none;
+    font-weight: 500;
+}
+.form_details input[type="number"] {
+    max-width: 80px;
 }
