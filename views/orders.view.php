@@ -7,7 +7,7 @@
         <div class="ordering-section" id="Order">
             <div class="container">
                 <?php
-                var_dump($orders);
+//                var_dump($orders);
                     if(!empty($orders)) {
                             foreach ($orders as $key => $order) {
                                 echo "<div class='container order wow fadeInLeft animated justify-content-center'>";

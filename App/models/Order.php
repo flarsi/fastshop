@@ -33,18 +33,26 @@ class Order
 
     public function save($data)
     {
-        $order = "INSERT INTO orders(user_id) VALUES (" . $data['userId'] .")";
-        $j = 0;
-        foreach ($productIds as $productId){
-            $orderProduct = "INSERT INTO order_product (order_product.order_id, order_product.product_id, order_product.price, order_product.weight)
-                             VALUES ($userId, $productId, $prices[$j], $weights[$j])";
+
+
+        $userId = ['userId' => $data['userId']];
+        $orderquery = "INSERT INTO orders(user_id) VALUES (:userId)";
+        $result = $this->db->prepare($orderquery);
+        $result->execute($userId);
+
+        $lastorder = "SELECT * FROM orders ORDER BY id DESC limit 1";
+        $resultLastOrder = $this->db->prepare($lastorder);
+        $resultLastOrder->execute();
+        $orderId = ['id' => $resultLastOrder->fetch()['id']];
+
+        foreach ($data['order'] as $order){
+
+            $orderProduct = "INSERT INTO order_product (order_id, product_id, price, weight)
+                             VALUES (" . $orderId['id'] . ", :id, :price, :weight)";
             $resultOrder = $this->db->prepare($orderProduct);
-            $resultOrder->execute($userId, $productId, $prices[$j], $weights[$j]);
-            $j++;
+            $resultOrder->execute($order);
         }
 
-        $result = $this->db->prepare($order);
-        $result->execute($userId);
         return $result->fetch();
 
     }

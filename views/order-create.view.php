@@ -1,10 +1,6 @@
 <?php
 require_once 'layouts/header.view.php';
 ?>
-<div>
-    <button class="btn btn-success" form="order-form" type="submit">Create</button>
-</div>
-
         <div class="container">
             <div class="col-12 wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
                 <h4><?=$title?></h4>
@@ -47,7 +43,7 @@ require_once 'layouts/header.view.php';
                                     <input type="hidden" name="user_id" value="2">
                                     <div class="clearfix"> </div>
                                     <div class="sub-button wow swing animated animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: swing;">
-                                        <input type="submit" value="Send message">
+                                        <input type="submit" class="sub" value="Send message">
                                     </div>
                                 </form>
                             </div>
@@ -63,21 +59,21 @@ require_once 'layouts/footer.view.php';
 <script>
     $("input[type=submit]").click(function (e) {
         e.preventDefault();
-        // console.log(document.location.origin + "/orders/store");
 
         let form = $('#order-form tbody tr');
         let data = [];
         form.each(function (index,value) {
-
-            data.push(
+            if(numb[index].value != '' && numb[index].value > 0) {
+                data.push(
                     {
                         id: $(value).attr('id'),
-                        weight: $(value).find('input[name=weight]').val(),
-                        price: $(value).find('input[name=price]').val()
+                        weight: $(value).find('input[name=weight]').val() * (numb[index].value),
+                        price: $(value).find('input[name=price]').val() * (numb[index].value)
                     }
                 );
+            }
         });
-        console.log(data)
+        console.log(data);
 
         $.ajax({
             type: "POST",
