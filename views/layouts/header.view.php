@@ -23,25 +23,22 @@
     <script src="../../public/js/simpleCart.min.js"> </script>
     <script type="text/javascript" src="../../public/js/move-top.js"></script>
     <script type="text/javascript" src="../../public/js/easing.js"></script>
+    <script type="text/javascript" src="../../public/js/add.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../public/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="../../public/css/register-style.css"> <!-- Gem style -->
+    <script src="../../public/js/modernizr.js"></script> <!-- Modernizr -->
 </head>
 <body>
 <!-- header-section-starts -->
 <div class="header">
     <div class="container">
         <div class="top-header">
-            <div class="logo">
-<!--                <a href="index.html"><img src="web/images/logo.png" class="img-responsive" alt="" /></a>-->
-            </div>
             <div class="queries">
                 <p>Questions? Call us Toll-free!<span>1800-0000-7777 </span><label>(11AM to 11PM)</label></p>
             </div>
             <div class="header-right">
                 <div class="cart box_1">
-                    <a href="checkout.html">
-                        <h3> <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<img src="web/images/bag.png" alt=""></h3>
-                    </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty card</a></p>
-                    <div class="clearfix"> </div>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -54,19 +51,10 @@
                     <li class="active"><a href="/" class="scroll">Home</a></li>|
                     <li><a href="/orders">Order</a></li>|
                     <li><a href="/orders/create">New order</a></li>|
-                    <li><a href="/contact">contact</a></li>
+                    <li><a href="/add">Add</a></li>
                     <div class="clearfix"></div>
                 </ul>
             </div>
-            <div class="login-section">
-                <ul>
-                    <li><a href="login.html">Login</a>  </li> |
-                    <li><a href="register.php">Register</a> </li> |
-                    <li><a href="#">Help</a></li>
-                    <div class="clearfix"></div>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
         </div>
     </div>
 </div>

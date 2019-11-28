@@ -45,183 +45,6 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    </div>
-    </div>
-    </div>
-    <div class="special-offers-section">
-        <div class="container">
-            <div class="special-offers-section-head text-center dotted-line">
-                <h4>Special Offers</h4>
-            </div>
-            <div class="special-offers-section-grids">
-                <div class="m_3"><span class="middle-dotted-line"> </span> </div>
-                <div class="container">
-                    <ul id="flexiselDemo3">
-                        <li>
-                            <div class="offer">
-                                <div class="offer-image">
-                                    <img src="web/images/p1.jpg" class="img-responsive" alt=""/>
-                                </div>
-                                <div class="offer-text">
-                                    <h4>Olister Combo pack lorem</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-                                    <input type="button" value="Grab It">
-                                    <span></span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="offer">
-                                <div class="offer-image">
-                                    <img src="web/images/p2.jpg" class="img-responsive" alt=""/>
-                                </div>
-                                <div class="offer-text">
-                                    <h4>Chicken Jumbo pack lorem</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-                                    <input type="button" value="Grab It">
-                                    <span></span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="offer">
-                                <div class="offer-image">
-                                    <img src="web/images/p3.jpg" class="img-responsive" alt=""/>
-                                </div>
-                                <div class="offer-text">
-                                    <h4>Crab Combo pack lorem</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-                                    <input type="button" value="Grab It">
-                                    <span></span>
-                                </div>
-
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="offer">
-                                <div class="offer-image">
-                                    <img src="web/images/p2.jpg" class="img-responsive" alt=""/>
-                                </div>
-                                <div class="offer-text">
-                                    <h4>Chicken Jumbo pack lorem</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-                                    <input type="button" value="Grab It">
-                                    <span></span>
-                                </div>
-
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                    </ul>
-                    <script type="text/javascript">
-                        $(window).load(function() {
-
-                            $("#flexiselDemo3").flexisel({
-                                visibleItems: 3,
-                                animationSpeed: 1000,
-                                autoPlay: false,
-                                autoPlaySpeed: 3000,
-                                pauseOnHover: true,
-                                enableResponsiveBreakpoints: true,
-                                responsiveBreakpoints: {
-                                    portrait: {
-                                        changePoint:480,
-                                        visibleItems: 1
-                                    },
-                                    landscape: {
-                                        changePoint:640,
-                                        visibleItems: 2
-                                    },
-                                    tablet: {
-                                        changePoint:768,
-                                        visibleItems: 3
-                                    }
-                                }
-                            });
-
-                        });
-                    </script>
-                    <script type="text/javascript" src="web/js/jquery.flexisel.js"></script>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popular-restaurents" id="Popular-Restaurants">
-        <div class="container">
-            <div class="col-md-4 top-restaurents">
-                <div class="top-restaurent-head">
-                    <h3>Top Restaurants</h3>
-                </div>
-                <div class="top-restaurent-grids">
-                    <div class="top-restaurent-logos">
-                        <div class="res-img-1 wow bounceIn" data-wow-delay="0.4s">
-                            <img src="web/images/restaurent-1.jpg" class="img-responsive" alt="" />
-                        </div>
-                        <div class="res-img-2 wow bounceIn" data-wow-delay="0.4s">
-                            <img src="web/images/restaurent-2.jpg" class="img-responsive" alt="" />
-                        </div>
-                        <div class="res-img-1 wow bounceIn" data-wow-delay="0.4s">
-                            <img src="web/images/restaurent-3.jpg" class="img-responsive" alt="" />
-                        </div>
-                        <div class="res-img-2 wow bounceIn" data-wow-delay="0.4s">
-                            <img src="web/images/restaurent-4.jpg" class="img-responsive" alt="" />
-                        </div>
-                        <div class="res-img-1 nth-grid1 wow bounceIn" data-wow-delay="0.4s">
-                            <img src="web/images/restaurent-5.jpg" class="img-responsive" alt="" />
-                        </div>
-                        <div class="res-img-2 nth-grid1 wow bounceIn" data-wow-delay="0.4s">
-                            <img src="web/images/restaurent-6.jpg" class="img-responsive" alt="" />
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 top-cuisines">
-                <div class="top-cuisine-head">
-                    <h3>Top Cuisines</h3>
-                </div>
-                <div class="top-cuisine-grids">
-                    <div class="top-cuisine-grid wow bounceIn" data-wow-delay="0.4s">
-                        <a href=""><img src="web/images/cuisine1.jpg" class="img-responsive" alt="" /> </a>
-                        <label>Cuisine Name</label>
-                    </div>
-                    <div class="top-cuisine-grid wow bounceIn" data-wow-delay="0.4s">
-                        <a href=""><img src="web/images/cuisine2.jpg" class="img-responsive" alt="" /> </a>
-                        <label>Cuisine Name</label>
-                    </div>
-                    <div class="top-cuisine-grid wow bounceIn" data-wow-delay="0.4s">
-                        <a href=""><img src="web/images/cuisine3.jpg" class="img-responsive" alt="" /> </a>
-                        <label>Cuisine Name</label>
-                    </div>
-                    <div class="top-cuisine-grid nth-grid wow bounceIn" data-wow-delay="0.4s">
-                        <a href=""><img src="web/images/cuisine4.jpg" class="img-responsive" alt="" /> </a>
-                        <label>Cuisine Name</label>
-                    </div>
-                    <div class="top-cuisine-grid nth-grid1 wow bounceIn" data-wow-delay="0.4s">
-                        <a href=""><img src="web/images/cuisine5.jpg" class="img-responsive" alt="" /> </a>
-                        <label>Cuisine Name</label>
-                    </div>
-                    <div class="top-cuisine-grid nth-grid1 wow bounceIn" data-wow-delay="0.4s">
-                        <a href=""><img src="web/images/cuisine6.jpg" class="img-responsive" alt="" /> </a>
-                        <label>Cuisine Name</label>
-                    </div>
-                    <div class="top-cuisine-grid nth-grid1 wow bounceIn" data-wow-delay="0.4s">
-                        <a href=""><img src="web/images/cuisine7.jpg" class="img-responsive" alt="" /> </a>
-                        <label>Cuisine Name</label>
-                    </div>
-                    <div class="top-cuisine-grid nth-grid nth-grid1 wow bounceIn" data-wow-delay="0.4s">
-                        <a href=""><img src="web/images/cuisine8.jpg" class="img-responsive" alt="" /> </a>
-                        <label>Cuisine Name</label>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
     <div class="service-section">
         <div class="service-section-top-row">
             <div class="container">
@@ -247,7 +70,7 @@
                         <img src="web/images/lunch.png" class="img-responsive" alt="" />
                     </div>
                     <div class="col-md-2 service-section-top-row-grid4 wow swing animated" data-wow-delay= "0.4s">
-                        <a href="order.html"><input type="submit" value="Order Now"></a>
+                        <a href="/orders/create"><input type="submit" value="Order Now"></a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -359,29 +182,8 @@
             </div>
         </div>
     </div>
-    </div>
+
     <!-- content-section-ends -->
 
-<!--<h1>Index</h1>-->
-<!--<h3>Hello --><?//=$name . ' | ' . $age?><!--</h3>-->
-<!-- <table>-->
-<!--     <thead>-->
-<!---->
-<!--     </thead>-->
-<!--     <tbody>-->
-<!--     --><?php
-//     foreach ($products as $product) {
-//         '<tr><td>'. $product['name'] .'</td></tr>';
-//     }
-//     ?>
-<!---->
-<!--     </tbody>-->
-<!-- </table>-->
-<!--<body>-->
-<!--<nav style="list-style: none">-->
-<!--    <li><a href="about">About</a></li>-->
-<!--    <li><a href="contact">Contact</a></li>-->
-<!--    <li><a href="about/culture">Culture</a></li>-->
-<!--</nav>-->
-<?php
-require_once 'layouts/footer.view.php';
+    <?php
+    require_once 'layouts/footer.view.php';

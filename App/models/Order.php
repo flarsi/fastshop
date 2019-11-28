@@ -18,8 +18,8 @@ class Order
           orders.id as order_id,
           orders.created_at as order_created_at,
           products.name as product_name,
-          sum(products.weight) as weight,
-          sum(products.price) as price
+          sum(order_product.weight) as weight,
+          sum(order_product.price) as price
           FROM orders 
           LEFT JOIN order_product on orders.id = order_product.order_id
           LEFT JOIN products on order_product.product_id = products.id

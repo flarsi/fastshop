@@ -3,7 +3,7 @@ require_once 'layouts/header.view.php';
 ?>
         <div class="container">
             <div class="col-12 wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
-                <h4><?=$title?></h4>
+<!--                <h4>--><?//=$title?><!--</h4>-->
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <?php if(!empty($categories)): ?>
@@ -53,6 +53,7 @@ require_once 'layouts/header.view.php';
             </div>
         </div>
 <script type="text/javascript" src="../public/js/create-order.js"></script>
+<script type="text/javascript" src="../public/js/sort-from-categories.js"></script>
 <?php
 require_once 'layouts/footer.view.php';
 ?>

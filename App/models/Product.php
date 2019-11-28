@@ -34,7 +34,7 @@ class Product
           product_statuses.name as product_status_name, 
           product_statuses.id as product_status_id 
           FROM products 
-          LEFT JOIN categories ON products.catigore_id = categories.id 
+          LEFT JOIN categories ON products.category_id = categories.id 
           LEFT JOIN product_statuses ON products.product_status_id = product_statuses.id ";
         if (!empty($productStatus)) {
             $query .= "WHERE products.product_status_id IN (" . $arr . ")";
@@ -63,7 +63,7 @@ class Product
           product_statuses.name as product_status_name, 
           product_statuses.id as product_status_id 
           FROM categories 
-          LEFT JOIN products ON products.catigore_id = categories.id 
+          LEFT JOIN products ON products.category_id = categories.id 
           LEFT JOIN product_statuses ON products.product_status_id = product_statuses.id ";
         if (!empty($productStatus)) {
             $query .= "WHERE products.product_status_id IN (" . $arr . ")";

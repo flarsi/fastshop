@@ -56,3 +56,57 @@
 .form_details input[type="number"] {
     max-width: 80px;
 }
+
+#products-select{
+    border: none;
+    height: 10pc;
+    overflow: hidden;
+}
+
+.order_product_name{
+    width: 120pt;
+}
+
+.order_created_at{
+    width: max-content;
+}
+
+.order_product_price, .order_product_weight{
+    width: 90pt;
+}
+
+#add-product{
+    display: none;
+}
+
+#add-select{
+    margin: 25px;
+    padding: 10px;
+    width: 15%;
+    font-size: 1.2em;
+    color: #8A8888;
+    background: none;
+    -webkit-appearance: none;
+    float: left;
+    outline: none;
+    font-weight: 500;
+    border: none;
+    height: 10pc;
+    overflow: hidden;
+    float: left;
+}
+
+#select_status, #select_category{
+    height: 10pc;
+    overflow: hidden;
+    float: left;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.textarea-desc{
+    width: 30pc;
+    height: 10pc;
+}
+
