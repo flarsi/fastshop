@@ -8,8 +8,10 @@
     <div class="col-12 col-md-6" style="float: left">
         <?php if(!empty($orders)): ?>
             <div class="form_details">
+<!--                --><?php //vardump($orders)?>
                 <?php foreach ($orders as $order) : ?>
-                <table class="table wow fadeInRight" align="center">
+                <h1 class="table wow fadeInRight">Order id №<?=$order[0]['order_id']?></h1>
+                <table id="order-<?=$order[0]['order_id']?>" class="table wow fadeInRight" align="center">
                     <thead>
                     <tr>
                             <td>Name</td>
@@ -30,9 +32,8 @@
                     </tbody>
                     <tfoot>
                     <tr>
-                        <td>
-
-                        </td>
+                        <td>Total price</td>
+                        <td class="total_price">++</td>
                     </tr>
                     </tfoot>
                 </table>
@@ -41,6 +42,7 @@
         <?php endif; ?>
     </div>
 </div>
+    <input id="hidd" type="hidden" value="1">
     <script src=".././public/js/order.js"></script>
 <?php
 require_once 'layouts/footer.view.php';

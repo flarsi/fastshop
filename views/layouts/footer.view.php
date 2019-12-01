@@ -7,6 +7,11 @@
 <!-- footer-section-ends -->
 <script type="text/javascript">
     $(document).ready(function() {
+        $("div.top-menu ul li").removeClass("active");
+        $(document).find($("div.top-menu ul li")[$("#hidd").val()]).addClass("active");
+    })
+
+    $(document).ready(function() {
         $().UItoTop({ easingType: 'easeOutQuart' });
 
     });

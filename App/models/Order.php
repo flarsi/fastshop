@@ -15,7 +15,8 @@ class Order
     public function all()
     {
        $query = "SELECT
-          orders.id as order_id,
+          orders.id,
+          order_product.order_id as order_id,
           orders.created_at as order_created_at,
           products.name as product_name,
           sum(order_product.weight) as weight,

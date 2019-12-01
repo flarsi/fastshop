@@ -79,6 +79,7 @@ require_once 'layouts/header.view.php';
             </div>
         </div>
     </div>
+<input id="hidd" type="hidden" value="3">
 <script type="text/javascript" src="../public/js/add.js"></script>
 <?php
 require_once 'layouts/footer.view.php';

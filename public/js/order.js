@@ -18,5 +18,17 @@ $(document).ready(function () {
             products[j].querySelector('.order_created_at').style = "display: none;";
         }
     }
+
+    for(var i = 0; i < $("table").length; i++){
+        var prices = document.getElementsByTagName("table")[i].querySelectorAll(".order_product_price");
+        var val = 0;
+        for (var j = 0; j < prices.length; j++) {
+            val += prices[j].innerHTML.slice(0, (prices[j].innerHTML.indexOf(' ')))*1;
+        }
+        var total = document.getElementsByTagName("table")[i].querySelectorAll(".total_price");
+        total[0].innerHTML = val + '.00 grn.';
+    }
 });
+
+
 

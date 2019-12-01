@@ -182,7 +182,7 @@
             </div>
         </div>
     </div>
-
+    <input id="hidd" type="hidden" value="0">
     <!-- content-section-ends -->
 
     <?php

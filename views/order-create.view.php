@@ -52,6 +52,7 @@ require_once 'layouts/header.view.php';
                 </div>
             </div>
         </div>
+<input id="hidd" type="hidden" value="2">
 <script type="text/javascript" src="../public/js/create-order.js"></script>
 <script type="text/javascript" src="../public/js/sort-from-categories.js"></script>
 <?php
