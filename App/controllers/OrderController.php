@@ -17,7 +17,7 @@ class OrderController
     public function index()
     {
         $order = new Order();
-        $orders = $order->all();
+        $orders = array_reverse($order->all(), true);
         return view('orders', ['orders' => $orders]);
     }
 

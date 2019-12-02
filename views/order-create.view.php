@@ -34,8 +34,8 @@ require_once 'layouts/header.view.php';
                                             <tr class="category_id-<?= $product['category_id'] ?>" id="<?= $product['product_id'] ?>">
                                                 <td><?= $product['product_name'] ?></td>
                                                 <td class="number"><input id="product_id-<?= $product['product_id'] ?>" type="number" name="id"  value=""></td>
-                                                <td class="price"><?= $product['price'] ?> grn.<input type="hidden" name="price" value="<?= $product['price'] ?>"></td>
-                                                <td class="weight"><?= $product['weight'] ?> kg.<input type="hidden" name="weight" value="<?= $product['weight'] ?>"></td>
+                                                <td class="price"><?= $product['price'] ?> grn.<input type="hidden" name="price" maxlength="10,2" value="<?= $product['price'] ?>"></td>
+                                                <td class="weight"><?= $product['weight'] ?> kg.<input type="hidden" name="weight" maxlength="10,2" value="<?= $product['weight'] ?>"></td>
                                             </tr>
                                         <?php endforeach; ?>
                                         </tbody>
