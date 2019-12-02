@@ -36,10 +36,10 @@ class OrderController
     public function store()
     {
         $post = $_POST;
-
-        $order = new  Order();
-        $sucsess = $order->save($post);
-
-        return $sucsess;
+        if(!empty($post)) {
+            $order = new  Order();
+            $sucsess = $order->save($post);
+            return $sucsess;
+        }
     }
 }

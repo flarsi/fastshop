@@ -65,7 +65,8 @@ require_once 'layouts/footer.view.php';
         let form = $('#order-form tbody tr');
         let data = [];
         form.each(function (index,value) {
-            if(numb[index].value != '' && numb[index].value > 0) {
+            console.log($(value).find('input[type = number]').val() != '');
+            if($(value).find('input[type = number]').val() != '' && $(value).find('input[type = number]').val() > 0) {
                 data.push(
                     {
                         id: $(value).attr('id'),
@@ -75,20 +76,21 @@ require_once 'layouts/footer.view.php';
                 );
             }
         });
-        console.log(data);
+        if(data != null && data != '') {
 
-        $.ajax({
-            type: "POST",
-            url: document.location.origin + "/orders/store",
-            data: {
-                userId: 2,
-                order: data
-            },
-            dataType: "text",
-            success: function (msg) {
-                console.log("Прибыли данные: " + msg);
-            }
-        });
+            $.ajax({
+                type: "POST",
+                url: document.location.origin + "/orders/store",
+                data: {
+                    userId: 2,
+                    order: data
+                },
+                dataType: "text",
+                success: function (msg) {
+                    console.log("Прибыли данные: " + msg);
+                }
+            });
+        }
     });
 </script>
 
