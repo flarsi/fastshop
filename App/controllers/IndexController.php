@@ -6,31 +6,28 @@ class IndexController
 {
     public function index()
     {
-        $user =
-        ['name'=>'Dima',
-        'age' =>35];
-        return view('index', $user);
+        return view('index');
     }
 
-    public function about()
-    {
-        return view('about');
-    }
-
-    public function contact()
-    {
-        return view('contact');
-    }
-
-    public function aboutCulture()
-    {
-        return view('contact-culture');
-    }
-
-    public function contactForm()
-    {
-        var_dump($_POST);
-    }
+//    public function about()
+//    {
+//        return view('about');
+//    }
+//
+//    public function contact()
+//    {
+//        return view('contact');
+//    }
+//
+//    public function aboutCulture()
+//    {
+//        return view('contact-culture');
+//    }
+//
+//    public function contactForm()
+//    {
+//        var_dump($_POST);
+//    }
 
 
 }

@@ -7,8 +7,8 @@
 <!-- footer-section-ends -->
 <script type="text/javascript">
     $(document).ready(function() {
-        $("div.top-menu ul li").removeClass("active");
-        $(document).find($("div.top-menu ul li")[$("#hidd").val()]).addClass("active");
+        $("div.top-menu div div").removeClass("active");
+        $(document).find($("div.top-menu div div")[$("#hidd").val()]).addClass("active");
     })
 
     $(document).ready(function() {

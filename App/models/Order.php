@@ -14,6 +14,16 @@ class Order
 
     public function all()
     {
+        $user = [
+          "name"=> $_COOKIE["name"],
+          "password"=> $_COOKIE["password"]
+        ];
+
+        $selectUser = "SELECT id FROM `users` WHERE name = :name and password = :password";
+        $result = $this->db->prepare($selectUser);
+        $result->execute($user);
+        $userId = $result->fetch()['id'];
+
        $query = "SELECT
           orders.id,
           order_product.order_id as order_id,
@@ -21,9 +31,10 @@ class Order
           products.name as product_name,
           sum(order_product.weight) as weight,
           sum(order_product.price) as price
-          FROM orders 
+          FROM orders
           LEFT JOIN order_product on orders.id = order_product.order_id
           LEFT JOIN products on order_product.product_id = products.id
+          WHERE orders.user_id = ". $userId ."
           GROUP BY orders.id, orders.created_at, products.name, products.weight, products.price  
           ";
 

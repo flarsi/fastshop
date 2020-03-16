@@ -9,6 +9,8 @@ ini_set("display_errors", 1);
     $router->get('add', 'AddController@index');
     $router->post('add/category', 'AddController@addCategory');
     $router->post('add/product', 'AddController@addProduct');
+    $router->post('user/register', 'UserController@register');
+    $router->post('user/logIn', 'UserController@logIn');
 
 //    $router->get('about', 'IndexController@about');
 //    $router->get('about/culture', 'IndexController@aboutCulture');

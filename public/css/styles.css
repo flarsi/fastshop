@@ -105,8 +105,90 @@
     outline: none;
 }
 
+.menu-item{
+    text-decoration: none;
+    color: #494949;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    width: max-content;
+    margin: 0 10px;
+}
+
 .textarea-desc{
     width: 30pc;
     height: 10pc;
 }
 
+.user-form{
+    float: right;
+    cursor: pointer;
+    position: relative;
+}
+
+.register, .login, .basket{
+    width: max-content;
+    float: left;
+    margin: 0.5em 10px;
+    height: max-content;
+    border-radius:5px 5px 0 0;
+    /*z-index: 1;*/
+}
+
+.register-menu, .login-menu{
+    position: absolute;
+    background-color: rgba(91, 189, 80, 0.5);
+    border-radius:0 5px 5px 5px ;
+    padding: 5px;
+    z-index: 1;
+}
+
+.register-menu input, .login-menu input{
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.disable{
+    display: none;
+}
+
+.hovered{
+    background-color: rgba(91, 189, 80, 0.5);
+}
+
+.login-submit{
+    float: right;
+}
+
+.login-remember{
+    display: block;
+    text-transform: none;
+    float: left;
+    padding: 0 2px;
+    margin: 5px 0;
+}
+
+.remember-password{
+    float: left;
+}
+
+.menu-orders{
+    float: left;
+}
+
+.logOut{
+    background: url("../images/logout.svg");
+    display: block;
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin: 10px 0;
+}
+
+.logOut:hover{
+    border-radius: 2px;
+    background-color: rgba(25, 25, 25, 0.08);
+}

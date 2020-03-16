@@ -104,7 +104,6 @@ a.simpleCart_empty {
 	font-weight:500;
 }
 .top-menu{
-	float:left;
 	color:#D9D9D9;
 }
 .login-section{
@@ -118,7 +117,7 @@ a.simpleCart_empty {
 .top-menu ul li:first-child {
 	margin-left: 0;
 }
-.top-menu ul li a{
+.top-menu div div a{
 	text-decoration:none;
 	margin:0.5em 0;
 	display:block;
@@ -127,10 +126,10 @@ a.simpleCart_empty {
 	font-weight:700;
 	text-transform:uppercase;
 }
-.top-menu ul li.active a{
+.top-menu div div.active a{
 	color:#5BBD50;
 }
-.top-menu ul li a:hover{
+.top-menu div div a:hover{
 	color:#5BBD50;
 }
 .login-section ul li{
@@ -1682,9 +1681,9 @@ ul.women_pagenation li a:hover{
 	padding: 2em 0;
 }
 /*--register--*/
-.register{
-	padding:3em 0 5em 0;
-}
+/*.register{*/
+/*	padding:3em 0 5em 0;*/
+/*}*/
 .register-top-grid h3, .register-bottom-grid h3 {
 	color:#000000;
 	font-size: 1.4em;
@@ -2726,7 +2725,7 @@ a.morebtn{
 	.queries p {
 		font-size: 1.1em;
 	}
-	.top-menu ul li a {
+	.top-menu div div a {
 		margin: 0.4em 0;
 		font-size: 14px;
 	}
@@ -3057,9 +3056,9 @@ a.morebtn{
 	.register-but form input[type="submit"] {
 		padding: 0.4em 1.5em;
 	}
-	.register {
-		padding: 2em 0 3em 0;
-	}
+	/*.register {*/
+	/*	padding: 2em 0 3em 0;*/
+	/*}*/
 	.register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
 		padding: 0.4em;
 	}
@@ -3384,7 +3383,7 @@ a.morebtn{
 	.contact-section-grid p {
 		display: none;
 	}
-	.top-menu ul li a {
+	.top-menu div div a {
 		font-size: 12px;
 	}
 	.login-section ul li a {
@@ -3668,9 +3667,9 @@ a.morebtn{
 	.register-top-grid h3, .register-bottom-grid h3 {
 		font-size: 1.2em;
 	}
-	.register {
-		padding: 1.5em 0 2em 0;
-	}
+	/*.register {*/
+	/*	padding: 1.5em 0 2em 0;*/
+	/*}*/
 	.contact_left p {
 		width: 100%;
 	}
@@ -3832,7 +3831,7 @@ a.morebtn{
 	.top-menu ul li, .login-section ul li {
 		margin: 0 5px;
 	}
-	.top-menu ul li a {
+	.top-menu div div a {
 		font-size: 10px;
 	}
 	.login-section ul li a {

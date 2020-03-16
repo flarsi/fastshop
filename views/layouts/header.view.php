@@ -48,13 +48,34 @@
     <div class="menu-bar">
         <div class="container">
             <div class="top-menu">
-                <ul>
-                    <li><a href="/" class="scroll">Home</a></li>|
-                    <li><a href="/orders">Order</a></li>|
-                    <li><a href="/orders/create">New order</a></li>|
-                    <li><a href="/add">Add</a></li>
-                    <div class="clearfix"></div>
-                </ul>
+                <div>
+                    <div class="menu-item col-2"><a href="/" class="scroll">Home</a></div>|
+                    <div class="menu-item col-2"><a href="/orders/create">New order</a></div>|
+                    <div class="menu-item col-2"><a href="/add">Add</a></div>
+                    <div class="col row user-form menu-item ">
+                        <div class="register col text-center ">register
+                            <div class="register-menu disable">
+                                <input type="text" class="register-name" placeholder="Name">
+                                <input type="email" class="register-email" placeholder="Email">
+                                <input type="password" class="register-password" placeholder="Password">
+                                <input type="button" class="register-submit" value="Register">
+                            </div>
+                        </div>
+                        <div class="login col text-center ">login
+                            <div class="login-menu disable">
+                                <input type="text" class="login-name" placeholder="Name">
+                                <input type="text" class="login-password" placeholder="Password">
+                                <input class="remember-password" type="checkbox" style="margin:8px 0 10px 10px">
+                                <div class="login-remember">Remember</div>
+                                <input type="button" class="login-submit" value="Login">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script src="../../public/js/jquery.cookie.js"></script>
+                <script src="../../public/js/nav-menu.js"></script>
             </div>
         </div>
     </div>
