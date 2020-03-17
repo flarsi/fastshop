@@ -133,15 +133,17 @@
     margin: 0.5em 10px;
     height: max-content;
     border-radius:5px 5px 0 0;
+    padding: 2px 2px 0 2px;
     /*z-index: 1;*/
 }
 
 .register-menu, .login-menu{
     position: absolute;
     background-color: rgba(91, 189, 80, 0.5);
-    border-radius:0 5px 5px 5px ;
+    border-radius:5px 5px 5px 5px ;
     padding: 5px;
     z-index: 1;
+    left: 0;
 }
 
 .register-menu input, .login-menu input{
