@@ -19,6 +19,8 @@ class Order
           "password"=> $_COOKIE["password"]
         ];
 
+        var_dump($user);
+
         $selectUser = "SELECT id FROM `users` WHERE name = :name and password = :password";
         $result = $this->db->prepare($selectUser);
         $result->execute($user);

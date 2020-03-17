@@ -189,6 +189,5 @@
 }
 
 .logOut:hover{
-    border-radius: 2px;
-    background-color: rgba(25, 25, 25, 0.08);
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(80deg) brightness(104%) contrast(97%);
 }

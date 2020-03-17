@@ -80,9 +80,9 @@ $(document).ready(function () {
             }
         })
     })
-
+    console.log(document.cookie)
     user.checkAuthorization();
-
+    console.log(document.cookie)
 })
 
 class User
@@ -90,12 +90,18 @@ class User
     userMenu = "<div class=\"menu-item col-2 row\"><a class='menu-orders col-6' href=\"/orders\">Your orders</a>" +
         "<a onclick='logOut()' class='logOut col-6' style='margin-left: 10px'></a></div>"
 
-    logIn(data)
+    logIn(data, user = splitCookie())
     {
         if(data == true)
         {
-            this.name = $(".login-name").val()
-            this.password = $(".login-password").val()
+            if(user['name'] == '' && user['password'] == ''){
+                this.name = $(".login-name").val()
+                this.password = $(".login-password").val()
+            }
+            else if(sessionStorage.length == 0){
+                this.name = $(".login-name").val()
+                this.password = $(".login-password").val()
+            }
 
             $.cookie('name', this.name)
             $.cookie('password', this.password)
@@ -110,7 +116,9 @@ class User
         if(user['name'] != '' && user['password'] != ''){
             this.name = user['name']
             this.password = user['password']
+            console.log(this)
             this.logIn(true)
+            console.log(this)
         }
         else if(sessionStorage.length != 0){
             this.name = sessionStorage.getItem('name')

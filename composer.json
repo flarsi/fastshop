@@ -1,7 +1,10 @@
 {
-  "autoload":{
-    "classmap":[
-      "./"
-    ]
-  }
+    "name": "professional/fastshop",
+    "authors": [
+        {
+            "name": "Danil Dan",
+            "email": "danil@gmail.com"
+        }
+    ],
+    "require": {}
 }
